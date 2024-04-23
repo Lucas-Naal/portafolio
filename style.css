@@ -1,0 +1,51 @@
+/* Estilos generales */
+
+body {
+    font-family: 'Exo', 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+#presentacion__container {
+    display: flex;
+    align-items: center;
+    background-color: bisque;
+}
+
+#presentacion__portafolio h3{
+    font-size: 4em;
+    padding-left: 4em;
+}
+/* Estilos para la imagen de perfil */
+
+.imagenPerfil{ 
+    padding-left: 50em;
+}
+.imagenPerfil img {
+    width: 257px;
+    height: 254px;
+    border-radius: 50%; 
+    border: 5px solid #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+/*Seccion de MIS PROYECTOS*/
+#mis__proyectos__portafolio h2{
+    font-size: 2.5em;
+}
+
+/*Seccion de SOBRE MI*/
+#sobremi__portafolio h2{
+    font-size: 2.5em;
+}
+
+#sobremi__portafolio p{
+    font-size: 1.4em;
+}
+
