@@ -13,13 +13,25 @@ section {
 #presentacion__container {
     display: flex;
     align-items: center;
-    background-color: bisque;
+    background-color: #15616d;
 }
 
 #presentacion__portafolio h3{
     font-size: 4em;
     padding-left: 4em;
+    color: #ffecd1;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
+
+
+.tituloAureum {
+    position: relative;
+    text-align: center;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent,rgba(0,0,0,0.2));
+}
+
 /* Estilos para la imagen de perfil */
 
 .imagenPerfil{ 
@@ -38,14 +50,75 @@ section {
 /*Seccion de MIS PROYECTOS*/
 #mis__proyectos__portafolio h2{
     font-size: 2.5em;
+    display: flex;
+    justify-content: center;
 }
 
 /*Seccion de SOBRE MI*/
 #sobremi__portafolio h2{
     font-size: 2.5em;
+    display: flex;
+    justify-content: center;
 }
 
 #sobremi__portafolio p{
     font-size: 1.4em;
+    padding: 0px 1.5em 0px 1.5em;
+    margin-bottom: 0;
 }
 
+#mis__proyectos__card__img {
+    display: flex;
+    margin: 1.6em;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#sobremi__container{ 
+    padding: 0;
+    margin: 0;
+}
+#mis__proyectos__card__img  img{
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.proyecto__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.proyecto__img {
+    width: 30%;
+    height: auto; 
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 5px; 
+}
+
+.proyecto__img:hover {
+    transform: scale(1.1);
+}
+
+
+#contacto__iconos__container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+} 
+
+#contacto__iconos__container svg { 
+    margin-left: 6em;
+}
+
+#contacto__iconos__container p { 
+    margin-left: 5.5em;
+}
+
+#contacto__portafolio h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+}
