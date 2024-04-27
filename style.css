@@ -105,7 +105,8 @@ section {
 #sobremi__portafolio h2,
 #contacto__portafolio h2,
 #experiencia__portafolio h2,
-#informacion__academica__portafolio h2 {
+#informacion__academica__portafolio h2 ,
+#tecnologias__portafolio h2{
     font-size: 2.5em;
     text-align: center;
 }
@@ -135,6 +136,26 @@ section {
 .proyecto__img:hover {
     transform: scale(1.1);
 }
+
+#tecnologias__card__img {
+    display: flex;
+    justify-content: space-around;
+}
+
+#tecnologias__card__img img {
+    /* width: calc(33.33% - 10em); */
+    width: auto;
+    height: 25em;
+    margin: 2em;
+    /* padding: 4em; */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+/* .tecnologias__img:hover {
+    transform: scale(1.1);
+}    */
+
 
 #contacto__iconos__container {
     display: flex;
@@ -222,5 +243,9 @@ section {
 }
 
 #contacto__container {
+    background-color: #000015;
+}
+
+#tecnologias__container {
     background-color: #000015;
 }
