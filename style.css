@@ -1,9 +1,9 @@
 /* Estilos generales */
-
 body {
     font-family: 'Exo', 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #f4f4ff;
 }
 
 section {
@@ -13,39 +13,214 @@ section {
 #presentacion__container {
     display: flex;
     align-items: center;
-    background-color: bisque;
+    justify-content: space-evenly;
 }
 
-#presentacion__portafolio h3{
+#presentacion__portafolio h2 {
     font-size: 4em;
-    padding-left: 4em;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    margin-left: 0.1em;
 }
+
+.tituloAureum {
+    position: relative;
+    text-align: center;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+}
+
 /* Estilos para la imagen de perfil */
 
-.imagenPerfil{ 
-    padding-left: 50em;
-}
-.imagenPerfil img {
-    width: 257px;
-    height: 254px;
-    border-radius: 50%; 
-    border: 5px solid #fff; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    background-size: cover; 
-    background-position: center; 
+.box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-/*Seccion de MIS PROYECTOS*/
-#mis__proyectos__portafolio h2{
+.box::before {
+    content: '';
+    position: absolute;
+    inset: -10px 140px;
+    background: linear-gradient(315deg,#00ccff, #d400d4);
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -20px 0px;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: #162052;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #070a1c;
+    z-index: 3;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+
+
+.imagenPerfil img {    
+    background-position: center;
+}  
+
+
+/* Seccion de MIS PROYECTOS */
+#mis__proyectos__portafolio h2,
+#sobremi__portafolio h2,
+#contacto__portafolio h2,
+#experiencia__portafolio h2,
+#informacion__academica__portafolio h2 {
     font-size: 2.5em;
+    text-align: center;
 }
 
-/*Seccion de SOBRE MI*/
-#sobremi__portafolio h2{
-    font-size: 2.5em;
-}
-
-#sobremi__portafolio p{
+#sobremi__portafolio p,
+#experiencia__portafolio p,
+#informacion__academica__portafolio p {
     font-size: 1.4em;
+    padding: 0 20px;
+    margin-bottom: 0;
 }
 
+#mis__proyectos__card__img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#mis__proyectos__card__img img {
+    width: calc(33.33% - 20px);
+    max-width: 580px;
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.proyecto__img:hover {
+    transform: scale(1.1);
+}
+
+#contacto__iconos__container {
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.contacto__iconos {
+    text-align: center;
+    margin: 0 10px; 
+}
+
+.contacto__iconos svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Reglas de medios para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #presentacion__container {
+        flex-direction: column;
+    }
+
+    .box {
+        margin-top: 4em;
+    }
+
+    #presentacion__portafolio h3 {
+        padding: 20px;
+    }
+
+     /* Estilos para el section sobremi__container en dispositivos móviles */
+    #sobremi__container.scroll__animation {
+        opacity: 1; 
+        transform: translateX(-100%); 
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #sobremi__container.scroll__animation.active {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+.scroll__animation {
+    opacity: 1; 
+    transform: translateX(-100%); 
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll__animation.active {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+#contacto__portafolio a {
+    text-decoration: none; 
+    color: inherit; 
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+#contacto__portafolio a:hover {
+    color: #8cc6ff; 
+}
+
+#presentacion__container {
+    background-color: #000015;
+}
+
+#mis__proyectos__container  {
+    background-color: #000015;
+}
+
+#sobremi__container  {
+    background-color: #000015;
+}
+
+#experiencia__container {
+    background-color: #000015;
+}
+
+#informacion__academica__container {
+    background-color: #000015;
+}
+
+#contacto__container {
+    background-color: #000015;
+}
