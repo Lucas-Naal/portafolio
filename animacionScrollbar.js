@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const sections = document.querySelectorAll(".scroll__animation");
         
         sections.forEach(section => {
-            if (scrollPosition >= section.offsetTop - window.innerHeight * 0.75) {
+            if (scrollPosition >= section.offsetTop - window.innerHeight * 0.87) {
                 section.classList.add("active");
             } else {
                 section.classList.remove("active");
