@@ -143,8 +143,8 @@ section {
 }
 
 #tecnologias__card__img img {
-    /* width: calc(33.33% - 10em); */
-    width: auto;
+    width: calc(33.33% - 20px);
+    /* width: auto; */
     height: 25em;
     margin: 2em;
     /* padding: 4em; */
