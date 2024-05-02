@@ -126,7 +126,7 @@ section {
 }
 
 #mis__proyectos__card__img img {
-    width: calc(33.33% - 20px);
+    width: calc(100% - 2.33%);
     max-width: 580px;
     margin: 10px;
     overflow: hidden;

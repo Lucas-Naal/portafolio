@@ -5,24 +5,30 @@ const proyectosImg = [
     }, {
         src: "https://i.ytimg.com/vi/cOUNOi297Mw/maxresdefault.jpg",
         alt: "proyecto2",
+        link: "https://netflix-by-aureumdev.netlify.app/"
     },{
         src: "https://i.ytimg.com/vi/7YDagj3cVAk/maxresdefault.jpg",
         alt: "proyecto3",
+        link: "https://calculadora-by-aureumdev.netlify.app/"
     }
 
 ];
-
 const proyectosContainer = document.getElementById("mis__proyectos__card__img");
-
 
 proyectosImg.forEach(proyecto  => {
     const img = document.createElement("img");
+    const a = document.createElement("a");
+
     img.src = proyecto.src;
     img.alt = proyecto.alt;
-    img.classList.add("proyecto__img")
-    proyectosContainer.appendChild(img)
-});
 
+    a.href = proyecto.link;
+    a.appendChild(img);
+
+    img.classList.add("proyecto__img");
+
+    proyectosContainer.appendChild(a); 
+});
 
 
 
